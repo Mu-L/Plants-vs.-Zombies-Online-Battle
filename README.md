@@ -47,6 +47,17 @@ The default IP version is *IPv4*. Enable the following statement in `src/lib/gam
 target_compile_definitions(game PRIVATE INET6=1)
 ```
 
+#### Slots
+
+The slots of zombies and plants are fixed in `src/lib/game/config.cpp`.
+
+```c++
+const Slots Player::default_zombies{ 0, 1, 2, 3, 4, 5, 6, 7, 8 };
+const Slots Player::default_plants{ 0, 1, 2, 3, 4, 5, 6, 7, 8 };
+```
+
+The correspondence between name and ID is detailed in `docs/Key Data and Functions.md`.
+
 ## Usage
 
 > The project only works with *Plants vs. Zombies **1.0.0.1051 CHINESE*** version, provided in `game` folder.
